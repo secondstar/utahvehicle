@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.2.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -45,3 +45,63 @@ group :development do
   gem 'spring'
 end
 
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+
+  ## gems for app
+  # gem 'minitest-spec-rails'
+  gem 'rspec-rails', '~> 3.4'
+  gem 'rspec-collection_matchers', '~> 1.1', '>= 1.1.2'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'shoulda-matchers'
+  # Pretty printed test output
+  gem 'turn', :require => false
+  
+  gem 'passenger'
+  gem 'guard'
+  # gem 'guard-minitest'
+  gem 'guard-rspec', require: false
+  gem 'guard-passenger'
+  gem "guard-bundler", "~> 2.0.0"
+  gem 'rr', '~> 1.1.2'
+  gem 'activerecord-nulldb-adapter'
+  gem 'database_cleaner', '~> 1.3.0'
+  gem 'travis', '~> 1.7.4'
+  gem 'awesome_print', :require => 'ap'
+  gem 'dotenv-rails', '~> 2.0.2'
+end
+
+group :production do
+  gem 'thin', '~> 1.6', '>= 1.6.4'
+end
+
+## app specific gems
+# backend
+gem 'rails_12factor', '~> 0.0.3'
+gem 'rails_admin', '~> 0.7.0'
+# gem 'paper_trail', '~> 4.0.0'
+
+# authentication
+gem 'devise', '~> 3.5', '>= 3.5.2'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
+
+# authorization
+gem 'cancancan', '~> 1.13', '>= 1.13.1'
+
+# asset upload
+gem 'carrierwave', '~> 0.10.0'
+gem 'rmagick', '~> 2.15', '>= 2.15.4'
+
+# scheduling
+gem 'ice_cube', '~> 0.13.3'
+
+# frontend
+# source 'https://rails-assets.org' do
+#   gem 'rails-assets-bootstrap'
+# end
+gem 'high_voltage', '~> 2.4'
