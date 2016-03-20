@@ -242,7 +242,7 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
-    rails_admin (0.7.0)
+    rails_admin (0.8.1)
       builder (~> 3.1)
       coffee-rails (~> 4.0)
       font-awesome-rails (>= 3.0, < 5)
@@ -312,7 +312,6 @@ GEM
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
     slop (3.6.0)
-    spring (1.6.4)
     sprockets (3.5.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -391,15 +390,14 @@ DEPENDENCIES
   pg (~> 0.15)
   rails (= 4.2.6)
   rails_12factor (~> 0.0.3)
-  rails_admin (~> 0.7.0)
+  rails_admin (~> 0.8.1)
   rmagick (~> 2.15, >= 2.15.4)
   rr (~> 1.1.2)
   rspec-collection_matchers (~> 1.1, >= 1.1.2)
-  rspec-rails (~> 3.4)
+  rspec-rails (~> 3.4, >= 3.4.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   shoulda-matchers
-  spring
   thin (~> 1.6, >= 1.6.4)
   travis (~> 1.7.4)
   turbolinks
