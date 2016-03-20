@@ -27,11 +27,10 @@
 #   # watch(%r{^app/models/(.*)\.rb$})      { |m| "test/unit/#{m[1]}_test.rb" }
 # end
 
-guard 'passenger',:cli => '--daemonize --port 4049', :notification => true do
+guard 'passenger', :cli => '--daemonize --port 3003' do
   watch(/^lib\/.*\.rb$/)
   watch(/^config\/.*\.rb$/)
 end
-
 
 guard :bundler do
   watch('Gemfile')
