@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html xmlns=http://www.w3.org/1999/xhtml> 
+    <head> 
+        <title>Barbarian meets coding - Flexbox - Example App - BLOG!</title> 
+        <meta charset=utf-8> 
+        <meta name=description content="Barbarian meets coding - Flexbox - Example App - BLOG!"> 
+        <meta name=viewport content="width=device-width"> 
+        <link rel="shortcut icon" href="http://www.barbarianmeetscoding.com/barbaric-basics-web-development/css-layout-dist//6df2b309.favicon.ico"> 
+        <link rel=stylesheet href="http://www.barbarianmeetscoding.com/barbaric-basics-web-development/css-layout-dist/styles/66dbb628.main.css"> 
+        <link rel=stylesheet href="http://www.barbarianmeetscoding.com/barbaric-basics-web-development/css-layout-dist/styles/blog.css"> 
+        <script src="http://www.barbarianmeetscoding.com/barbaric-basics-web-development/css-layout-dist/bower_components/modernizr/modernizr.js" ></script>  
+    </head>
+        <body> 
+            <header class=flex-container> 
+                <section class=brand> 
+                    <h1>M &amp; M Service</h1> 
+                </section> 
+                <nav class=flex-container> 
+                    <ul class=flex-container> 
+                        <li><%= link_to "Home", root_path %> </li> 
+                        <li><%= link_to "Coupons", coupons_path %></li> 
+                        <li><a href=#>Contact</a></li> 
+                    </ul> 
+                </nav> 
+            </header> 
+            <section class="main-content flex-container"> <section> 
+                <%= yield %>
+
+            </section> 
+            <aside> 
+                <section class=my-bio> 
+                    <figure class=flex-container> <img src="http://www.barbarianmeetscoding.com/barbaric-basics-web-development/css-layout-dist/images/ef3ed238.cat-suit.jpg" width="200"> 
+                        <figcaption> Hi! I am William Catspeare the IIIrd, I love playing with yarn and hunting mice. Welcome to my blog! Hope you Like it! Meeeeouw. 
+                        </figcaption> 
+                    </figure> 
+                </section> 
+            </aside> 
+        </section> 
+        <footer class=flex-container> <p>Copyright 2015 Catbarian meets coding.</p> </footer>  

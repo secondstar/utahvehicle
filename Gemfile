@@ -90,7 +90,7 @@ gem 'cancancan', '~> 1.13', '>= 1.13.1'
 
 # asset upload
 gem 'carrierwave', '~> 0.10.0'
-gem 'rmagick', '~> 2.15', '>= 2.15.4'
+# gem 'rmagick', '~> 2.15', '>= 2.15.4'
 
 # scheduling
 gem 'ice_cube', '~> 0.13.3'
