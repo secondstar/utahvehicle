@@ -1,121 +1,56 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <!-- jl layout start -->
-    <head>
-        <meta name="google-site-verification" content="arHr00XC_A7hYx-d5iIo-gM1WpcElw37N7IIP9vckDI" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>
-            M &amp; M Service Taylorsville, Utah
-        </title>
-        <meta name="description" content="Utah oil changes and other automotive by Jiffy Lube. Visit your nearest Utah Jiffy Lube for a quality oil change and other automotive services." />
-        <meta name="keywords" content="Utah, oil change, automotive" />
-        <link href="main2.css" rel="stylesheet" type="text/css" />
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-        <%= csrf_meta_tags %>
-        <style type="text/css">
-/*<![CDATA[*/
-        <!--
-        #apDiv1 {
-        position:absolute;
-        left:1169px;
-        top:752px;
-        width:128px;
-        height:123px;
-        z-index:2;
-        }
-        #apDiv2 {
-        position: absolute;
-        z-index: 2;
-        left: 509px;
-        top: 739px;
-        }
-        -->
-        /*]]>*/
-        </style>
-        <script type="text/javascript">
-//<![CDATA[
-        // google analytics. this should be moved the bottom.
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-38054726-1']);
-        _gaq.push(['_trackPageview']);
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>M&amp;M Service</title>
+    <style>
+    </style>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-        (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-        //]]>
-        </script>
-    </head>
-    <body background="/images/global_bg.gif">
-        <div id="Content">
-            <div id="Layer1">
-                <div class="style1" id="Layer5">
-                    Utah Jiffy Lube<span class="style5"><sup>®</sup></span>
-                </div>
-                <div class="style2" id="Layer6">
-                    Get a quality oil change at any of our Utah locations.
-                </div>
-                <div class="menu" id="Layer3">
-                    <%= link_to "Home", root_path %> &nbsp; <%= link_to "Coupons", coupons_path %> &nbsp; <%# link_to "Services", services_path %> &nbsp; <!-- <a href="fleet.htm">Fleet</a> &nbsp;  --><!-- <a href="http://jiffylubevipdiscount.com/" target="_blank">VIP Cards</a> &nbsp;  --><!-- <a href="http://jiffylube.com/giftcard/giftcard.aspx">Gift Cards</a> &nbsp;  --><!-- <a href="employment.htm">Jobs</a> &nbsp;  --><a href="contact.htm">Contact</a>
-                </div>
-                <div class="locator" id="Layer4">
-                    <a href="locations.htm">M&amp;M's Location</a>
-                </div>
-                <%= yield %>
-            </div>
+  </head>
+  <body>
+    <div class="box">
+      <header>
+        <div class="logo_and_title">
+          <a href="/"><div class="logo"></div></a>
+          <h1><a href="/">M&amp;M Service</a></h1>
         </div>
-        <p>
-            <map name="Map" id="Map">
-                <area shape="rect" coords="8,4,240,74" href="index.htm" />
-                <area shape="rect" coords="633,5,730,45" href="http://www.jiffylubeutah.com/competitive_call/report" />
-            </map>
-        </p>
-        <p>
-            <map name="Map3" id="Map3">
-                <area shape="rect" coords="8,161,215,197" href="blast08.htm" />
-            </map> <map name="Map4" id="Map4">
-                <area shape="rect" coords="11,8,199,180" href="blast09.htm" />
-            </map> <map name="Map2" id="Map2">
-                <area shape="rect" coords="41,47,77,89" href="http://www.jiffylubeutah.blogspot.com" />
-                <area shape="rect" coords="91,49,131,87" href="http://www.facebook.com/pages/Jiffy-Lube-Utah/197713506911636" />
-                <area shape="rect" coords="143,49,182,89" href="http://twitter.com/#!/jiffylubeutah" />
-            </map>
-        </p><!-- Google Code for Remarketing tag -->
-        <!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
-        <script type="text/javascript">
-// <![CDATA[
-        var google_conversion_id = 988515769;
-        var google_conversion_label = "2WsXCK-_pgQQuZuu1wM";
-        var google_custom_params = window.google_tag_params;
-        var google_remarketing_only = true;
-        // ]]>
-        </script><script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-// <![CDATA[
+        <nav><a href="/" class="nav_link">Home</a> <a href="/services" class="nav_link">Services</a> <a href="/coupons" class="nav_link">Coupons</a> <a href="/pages/contact_us" class="nav_link">Location</a> <a href="pages/contact_us" class="nav_link">Contact</a></nav>
+      </header>
 
-        // ]]>
-        </script><noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/988515769/?value=0&amp;label=2WsXCK-_pgQQuZuu1wM&amp;guid=ON&amp;script=0" />
-        </div></noscript><!-- Google Code for Remarketing tag -->
-        <!-- Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. For instructions on adding this tag and more information on the above requirements, read the setup guide: google.com/ads/remarketingsetup -->
-        <script type="text/javascript">
-// <![CDATA[
-        var google_conversion_id = 988515769;
-        var google_conversion_label = "2WsXCK-_pgQQuZuu1wM";
-        var google_custom_params = window.google_tag_params;
-        var google_remarketing_only = true;
-        // ]]>
-        </script><script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-// <![CDATA[
+      <!--Left Column--->
 
-        // ]]>
-        </script><noscript>
-        <div style="display:inline;">
-            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/988515769/?value=0&amp;label=2WsXCK-_pgQQuZuu1wM&amp;guid=ON&amp;script=0" />
-        </div></noscript><!-- jl layout finish -->
-    </body>
+      <section class="mainkazoo">
+          <%= yield %>
+      </section>
+
+      <!--Right Column--->
+
+      <section class="sidebarkazoo">
+      <article class="reverse">
+      <p>&nbsp;</p>
+
+          <h2>M&amp;M<br> Maintenance Services</h2>
+          <div class="sidebarlist" align="left">
+
+          <%= render :partial => "shared/service_listing", :collection => all_services %>
+          <p>&nbsp;&nbsp;</p>
+          </div>
+          <p class="sidebar" align="left">These services are available at M&amp;M Service in Utah. Click on the links above to get <a href="/services">more information on each service.</a></p>
+      </article>
+      </section>
+      <footer>
+        <hr />
+        <p>These services are available at these M&amp;M Services in Utah. Visit our location page for specific addresses, phone numbers and links to maps and list of services.</p>
+        <p class="copyright">Copyright Dice Media Group 2016</p>
+      </footer>
+
+      <div class="jump">
+        <a href="#top"><div class="up"></div></a>
+      </div>
+    </div>
+  </body>
 </html>

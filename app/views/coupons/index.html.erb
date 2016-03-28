@@ -1,5 +1,4 @@
-
-<h1 align="left">M &amp; M Service Coupons</h1>
+<h1 align="left">Coupons</h1>
 
 <p align="left">These coupons may be used at M &amp; M Service in Taylorsville, Utah. ADDITIONAL COUPONS can be found by clicking on the services listed at the right.</p>
 
@@ -8,7 +7,7 @@
 <% @coupons.each do |coupon| %>
     <article>
         <h1 class="coupon_title"><%= coupon.title %></h1>
-        <%= image_tag "http://jiffylubeutah.com/images/web10.jpg" %>
+        <%= link_to image_tag("web10_png.png", class: "coupon"), coupon_path(coupon) %>
     </article>
-    
+
 <% end %>
