@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'homes/index'
 
   resources :coupons, only: [:index, :show]
+  resources :services, only: [:index, :show]
+  resources :homes, only: [:index, :show]
 
   # You can have the root of your site routed with "root"
   root 'homes#index'

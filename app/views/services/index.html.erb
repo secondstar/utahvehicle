@@ -1,0 +1,18 @@
+<article>
+
+
+
+  <p>These services are available at M&amp;M Services. Click on each service for more information or visit our coupon page to get a <%= link_to "M & M Coupon", coupons_path() %> for that service.</p>
+
+  <p><strong>M&amp;M SERVICE MAINTENANCE SERVICES</strong></p>
+
+  <ul>
+    <% @services.each do |service| %>
+    <li><%= link_to service.title, service_path(service) %></li>
+    <% end %>
+
+  </ul>
+
+  <p>&nbsp;</p>
+
+</article>
