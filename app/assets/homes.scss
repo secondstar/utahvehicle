@@ -1,254 +1,183 @@
-// Place all the styles related to the homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #F5FCFF;
+}
 
-body, th, td {
-	margin:0px 0px;
-	padding:0px; /* Need to set body margin and padding to get consistency between browsers. */
-	text-align:center; /* Hack for IE5/Win */
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
+.wrapper {
+  margin: 0 auto;
+  max-width: 90%;
 }
-	
-#Content {
-	width:755px; /* Right and left margin widths set to "auto" */
-	text-align:left; /* Counteract to IE5/Win Hack */
-	padding:0px;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
-	height: auto;
-	margin-top: 0px;
-	margin-right: auto;
-	margin-bottom: 0px;
-	margin-left: auto;
-	z-index:1;
+
+header {
+  background-color: #B9C1D6;
+  height: 80px;
+  margin-bottom: 30px;
 }
-#Layer1 {
-	position:relative;
-	width:755px;
-	height:auto;
-	z-index:1;
-	overflow: visible;
-	padding:0px;
-	left: 0px;
-	top: 0px;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
+
+header .wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px;
 }
-#Layer2 {
-	position:absolute;
-	width:731px;
-	z-index:2;
-	left: 1px;
-	top: 0px;
-	overflow: visible;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
-	visibility: visible;
+
+.navigation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
-#Layer3 {
-	position:absolute;
-	width:491px;
-	height:22px;
-	z-index:3;
-	left: 30px;
-	top: 111px;
-	overflow: visible;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
+ 
+.logo,
+.icon {
+  background-color: #A3AEC5;
 }
-#Layer4 {
-	position:absolute;
-	width:163px;
-	height:auto;
-	z-index:3;
-	left: 557px;
-	top: 111px;
-	overflow: visible;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
+
+.logo {
+  width: 80px;
+  height: 14px;
 }
-#Layer5 {
-	position:absolute;
-	width:456px;
-	height:22px;
-	z-index:3;
-	left: 280px;
-	top: 17px;
-	overflow: visible;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
+
+.icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
-#Layer6 {
-	position:absolute;
-	width:456px;
-	height:22px;
-	z-index:3;
-	left: 280px;
-	top: 50px;
-	overflow: visible;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
+
+.mobile-menu-icon {
+  width: 40px;
+  height: 14px;
+  background-color: #ffffff;
+  display: none;
 }
-#Layer7 {
-	position:absolute;
-	width:220px;
-	height:22px;
-	z-index:3;
-	left: 23px;
-	top: 392px;
-	overflow: visible;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
+
+.logo {
+  width: 80px;
+  height: 14px;
+  background-color: #A3AEC5;
 }
-#Layer8 {
-	position:absolute;
-	width:223px;
-	height:294px;
-	z-index:3;
-	left: 268px;
-	top: 390px;
-	overflow: visible;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
+
+.main-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
 }
-#Layer9 {
-	position:absolute;
-	width:207px;
-	height:22px;
-	z-index:3;
-	left: 516px;
-	top: 390px;
-	overflow: visible;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
+
+.intro {
+  margin-right: 30px;
+  -webkit-box-flex: 0.75;
+  -webkit-flex: 0.75;
+      -ms-flex: 0.75;
+          flex: 0.75;
+  background-color: #B9C1D6;
 }
-a:link {
-	color: #CC3300;
-	text-decoration: none;
+
+.sidebar {
+  -webkit-box-flex: 0.25;
+  -webkit-flex: 0.25;
+      -ms-flex: 0.25;
+          flex: 0.25;
+  background-color: #E2E9FA;
 }
-a:visited {
-	text-decoration: none;
-	color: #CC3300;
+
+.intro,
+.sidebar {
+  height: 400px;
 }
-a:hover {
-	text-decoration: underline;
-	color: #CC3300;
+
+.featured-tiles {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
 }
-a:active {
-	text-decoration: none;
-	color: #CC3300;
+
+.tile {
+  -webkit-box-flex: 0.25;
+  -webkit-flex: 0.25;
+      -ms-flex: 0.25;
+          flex: 0.25;
+  background-color: #E2E9FA;
+  margin-right: 30px;
+  height: 100px;
 }
-.menu {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14px;
-	color: #FFFFFF;
+
+.tile:last-child {
+  margin-right: 0;
 }
-.menu a:link {
-	color: #FFFFFF;
-	text-decoration: none;
+
+@media (max-width: 768px) {
+  .intro,
+  .sidebar {
+    -webkit-box-flex: 0.5;
+    -webkit-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+  }
+  
+  .tile {
+    -webkit-box-flex: 0.5;
+    -webkit-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+  }
 }
-.menu a:visited {
-	text-decoration: none;
-	color: #FFFFFF;
+
+@media (max-width: 520px) {
+  .navigation {
+    display: none;
+  }
+  
+  .mobile-menu-icon {
+    display: block;
+  }
+ 
+  .main-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .intro,
+  .sidebar {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  
+  .intro {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+  
+  .featured-tiles {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  
+  .tile {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
 }
-.menu a:hover {
-	text-decoration: underline;
-	color: #FFFFFF;
-}
-.menu a:active {
-	text-decoration: none;
-	color: #FFFFFF;
-}
-.locator {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 18px;
-	color: #FFFFFF;
-}
-.locator a:link {
-	color: #FFFFFF;
-	text-decoration: none;
-}
-.locator a:visited {
-	text-decoration: none;
-	color: #FFFFFF;
-}
-.locator a:hover {
-	text-decoration: underline;
-	color: #FFFFFF;
-}
-.locator a:active {
-	text-decoration: none;
-	color: #FFFFFF;
-}
-.footer {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #000000;
-}
-.footer a:link {
-	color: #000000;
-	text-decoration: none;
-}
-.footer a:visited {
-	text-decoration: none;
-	color: #000000;
-}
-.footer a:hover {
-	text-decoration: underline;
-	color: #000000;
-}
-.footer a:active {
-	text-decoration: none;
-	color: #000000;
-}
-h1 {
-	font-size: 18px;
-	color: #000000;
-}
-h2 {
-	font-size: 14px;
-	color: #000000;
-}
-.style1 {
-	font-size: 28px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-}
-.style2 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
-}
-.sidebar {	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-}
-.sidebarlist p {
-	margin-top: 0px;
-	margin-bottom: 2px;
-	font-size: 9pt;
-}
-.style5 {
-font-size: 16px
-}
-.style6 {
-font-size: 6pt}
