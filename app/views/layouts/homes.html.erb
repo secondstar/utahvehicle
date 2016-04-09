@@ -1,2 +1,78 @@
-              <%= yield %>
-home layout
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>M&amp;M Service Station</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <%= stylesheet_link_tag "style.css" %>
+  </head>
+
+  <body>
+
+  <header>
+    <div class="wrapper">
+      <div class="logo"></div>
+      <div class="navigation">
+        <div class="icon"><%= link_to "Home", root_path %></div>
+        <div class="icon"><%= link_to "Service", services_path %></div>
+        <div class="icon"><%= link_to "Coupons", coupons_path %></div>
+        <div class="icon"><%= link_to "Our Location", "/contact_us" %></div>
+      </div>
+      <div class="mobile-menu-icon"></div>
+    </div>
+  </header>
+  <div class="wrapper">
+    <div class="main-content">
+      <div class="intro">
+        <a href="http://jiffylubeutah.com/mydashboard.htm"><img src="http://jiffylubeutah.com/images/UT-Web-dashboard-banner.jpg" alt="More Than Oil Change" height="202" width="508"></a>
+      </div>
+
+        <p><a href="coupons.htm"><img src="http://jiffylubeutah.com/images/10off.gif" alt="$7 Off Link" height="110" border="0" width="223"></a><br >
+          Add life to your car with added savings! <a href="coupons.htm">Get $10 off a Jiffy Lube Signature Service® Oil Change.</a></p>
+
+    </div>
+    <div class="featured-tiles">
+      <div class="tile">
+        <div class="locator">Community Service</div>
+        <p align="center">&nbsp;</p>
+        <p align="center">
+          <a href="http://www.yourturn2apply.com/utah.htm">
+            <img src="http://jiffylubeutah.com/images/teendriver.gif" height="130" border="0" width="200">
+          </a>
+        </p>
+        <hr align="center" width="170">
+        <div align="left">
+          <p>The Jiffy Lube "What Drives You?" High School Scholarship program is a unique opportunity to pursue your interests, goals and ideas.</p>
+        </div>
+      </div>
+      <div class="tile">
+        <div class="locator"><a href="http://jiffylubevipdiscount.com/" target="_blank">Business VIP Cards</a></div>
+        <p align="center"><br> <img src="http://jiffylubeutah.com/images/vip_cards3.jpg" alt="Jiffy Lube VIP Card" height="130" width="200"></p>
+        <h2>Treat your employees<br> like VIPs!</h2>
+        <p >Reward them with generous discounts at Jiffy Lube. <a href="http://jiffylubevipdiscount.com/" target="_blank">Order your FREE VIP Discount Cards</a> now.</p>
+        <p ></p>
+
+      </div>
+      <div class="tile">
+
+        <h2>M&amp;M<br> Maintenance Services</h2>
+        <div class="sidebarlist" align="left">
+
+        <%= render :partial => "shared/service_listing", :collection => all_services %>
+        <p>&nbsp;&nbsp;</p>
+        </div>
+        <p class="sidebar" align="left">These services are available at M&amp;M Service in Utah. Click on the links above to get <a href="/services">more information on each service.</a></p>
+
+      </div>
+
+    </div>
+  </div>
+    <!-- <footer>
+      <img src="http://jiffylubeutah.com/images/footer2.gif" alt="footer image" />
+    </footer> -->
+
+
+
+  </body>
+</html>

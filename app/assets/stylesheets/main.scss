@@ -212,25 +212,25 @@ div.jump:hover {background: rgba(0,0,0, 1); border: 1px solid rgba(255, 255, 255
    -webkit-order: 0; -ms-flex-order: 0; order: 0;
    -webkit-flex: 0 1 auto;-ms-flex: 0 1 auto; flex: 0 1 auto;
    -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto;
-   background: rgba(255, 0, 51, .5);}
+ }
 
 .reverse:nth-of-type(4n+2) {
    -webkit-order: 0; -ms-flex-order: 0; order: 0;
    -webkit-flex: 0 1 auto;-ms-flex: 0 1 auto; flex: 0 1 auto;
    -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto;
-   background: rgba(170, 221, 51, .5);}
+ }
 
 .reverse:nth-of-type(4n+3) {
    -webkit-order: 0; -ms-flex-order: 0; order: 0;
    -webkit-flex: 0 1 auto;-ms-flex: 0 1 auto; flex: 0 1 auto;
    -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto;
-   background: rgba(51, 204, 204, .5);}
+ }
 
 .reverse:nth-of-type(4n+4) {
    -webkit-order: 0; -ms-flex-order: 0; order: 0;
    -webkit-flex: 0 1 auto;-ms-flex: 0 1 auto; flex: 0 1 auto;
    -webkit-align-self: auto; -ms-flex-item-align: auto; align-self: auto;
-   background: rgba(204, 204, 0, .5);}
+ }
 
 /* Regulated Background Post Pattern Hover */
 
@@ -240,7 +240,7 @@ div.jump:hover {background: rgba(0,0,0, 1); border: 1px solid rgba(255, 255, 255
 -o-transition: background 0.35s ease-in-out;
 -ms-transition: background 0.35s ease-in-out;
  transition: background 0.35s ease-in-out;
-   background: rgba(255, 0, 51, .65);}
+}
 
 .reverse:nth-of-type(4n+2):hover {
 -webkit-transition: background 0.35s ease-in-out;
@@ -248,7 +248,7 @@ div.jump:hover {background: rgba(0,0,0, 1); border: 1px solid rgba(255, 255, 255
 -o-transition: background 0.35s ease-in-out;
 -ms-transition: background 0.35s ease-in-out;
  transition: background 0.35s ease-in-out;
-   background: rgba(170, 221, 51, .65);}
+}
 
 .reverse:nth-of-type(4n+3):hover {
 -webkit-transition: background 0.35s ease-in-out;
@@ -256,7 +256,7 @@ div.jump:hover {background: rgba(0,0,0, 1); border: 1px solid rgba(255, 255, 255
 -o-transition: background 0.35s ease-in-out;
 -ms-transition: background 0.35s ease-in-out;
  transition: background 0.35s ease-in-out;
-   background: rgba(51, 204, 204, .65);}
+}
 
 .reverse:nth-of-type(4n+4):hover {
 -webkit-transition: background 0.35s ease-in-out;
@@ -264,11 +264,12 @@ div.jump:hover {background: rgba(0,0,0, 1); border: 1px solid rgba(255, 255, 255
 -o-transition: background 0.35s ease-in-out;
 -ms-transition: background 0.35s ease-in-out;
  transition: background 0.35s ease-in-out;
-   background: rgba(204, 204, 0, .65);}}
+}}
 
 /* Mobile Layout w/Screens larger than 480px */
 
 @media all and (orientation: portrait) {
- section{width:100%;}
+  header{width:100%;}
+  section{width:100%;}
 
 }
