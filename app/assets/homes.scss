@@ -1,3 +1,20 @@
+@import "bourbon";
+
+$base-spacing: 30px;
+$icon-size: 14px;
+$light-purple: #E2E9FA;
+$dark-purple: #A3AEC5;
+
+// Screen sizes
+$small-screen-size: 520px;
+$medium-screen-size: 768px;
+
+@mixin below($screen-size) {
+  @media only screen and (max-width: $screen-size) {
+    @content;
+  }
+}
+
 body {
   background-color: #F5FCFF;
 }
@@ -5,50 +22,42 @@ body {
 .wrapper {
   margin: 0 auto;
   max-width: 90%;
+  padding: 0 $base-spacing;
+  
+  header & {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
 }
 
 header {
   background-color: #B9C1D6;
   height: 80px;
-  margin-bottom: 30px;
-}
-
-header .wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 80px;
+  margin-bottom: $base-spacing;
 }
 
 .navigation {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
+  @include below($small-screen-size) {
+    display: none;
+  }
 }
  
 .logo,
 .icon {
-  background-color: #A3AEC5;
+  background-color: $dark-purple;
 }
 
 .logo {
   width: 80px;
-  height: 14px;
+  height: $icon-size;
 }
 
 .icon {
-  width: 14px;
-  height: 14px;
+  width: $icon-size;
+  height: $icon-size;
   margin-right: 10px;
 
   &:last-child {
@@ -58,126 +67,81 @@ header .wrapper {
 
 .mobile-menu-icon {
   width: 40px;
-  height: 14px;
-  background-color: #ffffff;
+  height: $icon-size;
   display: none;
-}
+  background-color: #ffffff;
 
-.logo {
-  width: 80px;
-  height: 14px;
-  background-color: #A3AEC5;
+  @include below($small-screen-size) {
+    display: block;
+  }
 }
 
 .main-content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: $base-spacing;
+  
+  @include below($small-screen-size) {
+    flex-direction: column;
+  }
 }
 
 .intro {
-  margin-right: 30px;
-  -webkit-box-flex: 0.75;
-  -webkit-flex: 0.75;
-      -ms-flex: 0.75;
-          flex: 0.75;
+  margin-right: $base-spacing;
+  flex: 0.75;
   background-color: #B9C1D6;
+  
+  @include below($small-screen-size) {
+    margin-right: 0;
+    margin-bottom: $base-spacing;
+  }
 }
 
 .sidebar {
-  -webkit-box-flex: 0.25;
-  -webkit-flex: 0.25;
-      -ms-flex: 0.25;
-          flex: 0.25;
-  background-color: #E2E9FA;
+  flex: 0.25;
+  margin-right: $base-spacing;
+  background-color: $light-purple;
+  
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .intro,
 .sidebar {
-  height: 400px;
+  height: 500px;
+  
+  @include below($medium-screen-size) {
+    flex: 0.5;
+  }
+  
+  @include below($small-screen-size) {
+    flex: 1;
+  }
 }
 
 .featured-tiles {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: $base-spacing;
+  flex-wrap: wrap;
+  
+  @include below($small-screen-size) {
+    flex-direction: column;
+  }
 }
 
 .tile {
-  -webkit-box-flex: 0.25;
-  -webkit-flex: 0.25;
-      -ms-flex: 0.25;
-          flex: 0.25;
-  background-color: #E2E9FA;
-  margin-right: 30px;
+  flex: 0.25;
+  background-color: $light-purple;
+  margin-right: $base-spacing;
   height: 100px;
-}
-
-.tile:last-child {
-  margin-right: 0;
-}
-
-@media (max-width: 768px) {
-  .intro,
-  .sidebar {
-    -webkit-box-flex: 0.5;
-    -webkit-flex: 0.5;
-        -ms-flex: 0.5;
-            flex: 0.5;
-  }
-  
-  .tile {
-    -webkit-box-flex: 0.5;
-    -webkit-flex: 0.5;
-        -ms-flex: 0.5;
-            flex: 0.5;
-  }
-}
-
-@media (max-width: 520px) {
-  .navigation {
-    display: none;
-  }
-  
-  .mobile-menu-icon {
-    display: block;
-  }
  
-  .main-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .intro,
-  .sidebar {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-  
-  .intro {
-    margin-bottom: 30px;
+  &:last-child {
     margin-right: 0;
   }
   
-  .featured-tiles {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  
-  .tile {
-    margin-bottom: 30px;
+  @include below($small-screen-size) {
+    margin-bottom: $base-spacing;
     margin-right: 0;
   }
 }
+

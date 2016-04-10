@@ -100,3 +100,4 @@ gem 'ice_cube', '~> 0.13.3'
 #   gem 'rails-assets-bootstrap'
 # end
 gem 'high_voltage', '~> 2.4'
+gem 'bourbon', '~> 4.2', '>= 4.2.6'
