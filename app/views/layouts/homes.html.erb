@@ -20,8 +20,23 @@
 </header>
 <div class="wrapper">
   <div class="main-content">
-    <div class="intro">intro</div>
-    <div class="sidebar">sidebar</div>
+    <div class="intro">
+      <div class="featured-promos">
+        <div class="promo">promo</div>
+        <div class="promo">promo</div>
+        <div class="promo">promo</div>
+      </div>
+    </div>
+    <aside class="sidebar">
+        <h2><a href="/">M&amp;M Service</a></h2>
+        
+        <div class="sidebarlist">
+            <ul>
+                <p>&nbsp;</p>
+                <%= render :partial => "shared/service_listing", :collection => all_services %>
+            </ul>
+        </div>
+    </aside>
   </div>
   <div class="featured-tiles">
     <div class="tile">tile1</div>
