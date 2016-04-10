@@ -8,24 +8,28 @@
 
 <header>
   <div class="wrapper">
-    <div class="logo"></div>
+    <%= link_to(root_path) do %><div class="logo"></div><% end %>
+    
+    <div class="site-title">
+        <h1><%= link_to "M&M Service", root_path %></h1>
+    </div>
     <div class="navigation">
-      <div class="icon">icon</div>
-      <div class="icon">icon</div>
-      <div class="icon">icon</div>
-      <div class="icon">icon</div>
+        <%= link_to "Home", homes_path, class: "icon" %>
+        <%= link_to "Coupons", coupons_path, class: "icon" %>
+        <%= link_to "Services", services_path, class: "icon" %>
+        <%= link_to "Fleet", services_path, class: "icon" %>
+        <%= link_to "Location", homes_path, class: "icon" %>
+        
     </div>
     <div class="mobile-menu-icon"></div>
   </div>
 </header>
 <div class="wrapper">
   <div class="main-content">
-    <div class="intro">
-      <div class="featured-promos">
+    <div class="intro featured-promos">
         <div class="promo">promo</div>
         <div class="promo">promo</div>
         <div class="promo">promo</div>
-      </div>
     </div>
     <aside class="sidebar">
         <h2><a href="/">M&amp;M Service</a></h2>
